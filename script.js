@@ -11,7 +11,7 @@ var texts = ['Мне с тобой тепло!',
 'Ты моя любимая моська!',
 'Ты - моя макарошка на тарелке!',
 'Ты будешь лучшим дедом-пердедом!',
-'Очень грустно просыпаться без тебя :(',
+'Очень грустно просыпаться без тебя :&nbsp;(',
 'Когда ты пишешь, я готова все бросить и бежать к тебе!',
 'Растворяюсь в твоих обнимашках',
 'Готова не разбрасывать носки ради тебя!',
@@ -22,17 +22,7 @@ var texts = ['Мне с тобой тепло!',
 function text() {
 	var random = Math.floor(Math.random() * 10 + Math.random() * 10);
 	var text = document.querySelector('.text');
-	
-	text.classList.add('animate');	
-	text.classList.remove('animate-stop');	
-	setTimeout(function() {
-		text.innerHTML = texts[random];		
-	}, 500);
-	setTimeout(function() {
-		text.classList.remove('animate');
-		text.classList.add('animate-stop');	
-	}, 3000);
-
+	text.innerHTML = texts[random];		
 	
 	
 }
